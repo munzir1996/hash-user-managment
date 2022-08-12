@@ -53,7 +53,8 @@ export class MenusComponent implements OnInit {
                     },
                     {
                         label: 'Edit',
-                        icon: 'pi pi-fw pi-user-edit'
+                        icon: 'pi pi-fw pi-user-edit',
+                        routerLink: '/',
                     }
                 ]
             },

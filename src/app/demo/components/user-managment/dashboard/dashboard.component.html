@@ -1,0 +1,50 @@
+<div class="grid p-fluid">
+    <div class="col-12">
+        <div class="card card-w-title">
+            <h5>User Managment</h5>
+            <p-menubar [model]="tieredItems">
+                <!-- <ng-template pTemplate="end">
+                    <span class="p-input-icon-right">
+                        <input type="text" pInputText placeholder="Search">
+                        <i class="pi pi-search"></i>
+                    </span>
+                </ng-template> -->
+            </p-menubar>
+        </div>
+    </div>
+
+</div>
+
+<div class="grid p-fluid">
+    <div routerLink="/user-managment/users-accounts" class="col-3 mb-3 mt-3 cursor-pointer hover:shadow-8 transition-colors transition-duration-100 hover:bg-blue-500">
+        <p-card header="Users Account" styleClass="p-card-shadow">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="assets/demo/images/login/EDU LOGO.png">
+            </ng-template>
+        </p-card>
+    </div>
+    <!-- "transition-colors transition-duration-1000 hover:bg-yellow-500 -->
+    <div class="col-3 mb-3 mt-3 cursor-pointer hover:shadow-8 transition-colors transition-duration-100 hover:bg-blue-500">
+        <p-card header="Users Modules" styleClass="p-card-shadow">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="assets/demo/images/login/EDU LOGO.png">
+            </ng-template>
+        </p-card>
+    </div>
+    <div class="col-3 mb-3 mt-3 cursor-pointer hover:shadow-8 transition-colors transition-duration-100 hover:bg-blue-500">
+        <p-card header="Users Policies" styleClass="p-card-shadow">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="assets/demo/images/login/EDU LOGO.png">
+            </ng-template>
+        </p-card>
+    </div>
+    <div class="col-3 mb-3 mt-3 cursor-pointer hover:shadow-8 transition-colors transition-duration-100 hover:bg-blue-500">
+        <p-card header="Users Report" styleClass="p-card-shadow">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="assets/demo/images/login/EDU LOGO.png">
+            </ng-template>
+        </p-card>
+    </div>
+
+</div>
+
