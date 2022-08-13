@@ -1,0 +1,57 @@
+<div class="grid p-fluid">
+    <div class="col-12">
+        <div class="card card-w-title">
+            <h5>User Managment</h5>
+            <p-menubar [model]="tieredItems">
+                <!-- <ng-template pTemplate="end">
+                    <span class="p-input-icon-right">
+                        <input type="text" pInputText placeholder="Search">
+                        <i class="pi pi-search"></i>
+                    </span>
+                </ng-template> -->
+            </p-menubar>
+        </div>
+    </div>
+</div>
+
+<div class="mt-2 grid p-fluid">
+    <h2>Users Policies</h2>
+</div>
+
+<div class="card">
+    <h5>User log report</h5>
+    <div class="field">
+        <label class="col-12 md:col-2" for="state">Date<span class="text-red-500">*</span></label>
+        <p-calendar [showIcon]="true" inputId="icon"></p-calendar>
+    </div>
+
+    <div class="field">
+        <label htmlFor="user" class="col-12 mb-2 md:col-2 md:mb-0">Select User</label>
+        <input pInputText id="user" type="text" class="col-12 md:col-10"/>
+    </div>
+
+    <div class="col-12 field grid">
+        <label class="col-12 md:col-2" for="state">Search Method<span class="text-red-500">*</span></label>
+        <div class="col-2 field-checkbox">
+            <p-checkbox name="group1" value="New York" id="ny"></p-checkbox>
+            <label for="ny">Update</label>
+        </div>
+        <div class="col-2 field-checkbox">
+            <p-checkbox name="group1" value="New York" id="ny"></p-checkbox>
+            <label for="ny">Insert</label>
+        </div>
+        <div class="col-2 field-checkbox">
+            <p-checkbox name="group1" value="New York" id="ny"></p-checkbox>
+            <label for="ny">Delete</label>
+        </div>
+        <div class="col-2 field-checkbox">
+            <p-checkbox name="group1" value="New York" id="ny"></p-checkbox>
+            <label for="ny">All</label>
+        </div>
+    </div>
+
+    <button pButton label="Print" class="p-button-primary"></button>
+    <button pButton label="Clear" class="ml-3 p-button-danger"></button>
+</div>
+
+

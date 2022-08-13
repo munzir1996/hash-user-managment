@@ -1,12 +1,17 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { MenuItem, TreeNode } from 'primeng/api';
 import { Subscription } from 'rxjs';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
+import { NodeService } from 'src/app/demo/service/node.service';
 
 @Component({
-    templateUrl: './dashboard.component.html',
+    templateUrl: './users-modules.component.html',
 })
-export class DashboardComponent implements OnInit, OnDestroy {
+export class UsersModulesComponent implements OnInit, OnDestroy {
+
+    files1: TreeNode[] = [];
+
+    selectedFiles1: TreeNode[] = [];
 
     items!: MenuItem[];
 
@@ -18,10 +23,15 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
     subscription!: Subscription;
 
-    constructor(public layoutService: LayoutService) {
+    constructor(
+        public layoutService: LayoutService,
+        private nodeService: NodeService,
+        ) {
     }
 
     ngOnInit() {
+        this.nodeService.getFiles().then(files => this.files1 = files);
+
         this.tieredItems = [
             {
                 label: 'Home',

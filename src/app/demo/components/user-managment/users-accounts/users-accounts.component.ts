@@ -39,10 +39,12 @@ export class UsersAccountsComponent implements OnInit, OnDestroy {
                     },
                     {
                         label: 'Users Modules',
+                        routerLink: '/user-managment/users-modules',
                         // icon: 'pi pi-fw pi-search'
                     },
                     {
                         label: 'Users Policies',
+                        routerLink: '/user-managment/users-policies',
                         // icon: 'pi pi-fw pi-search'
                     }
 
@@ -54,11 +56,13 @@ export class UsersAccountsComponent implements OnInit, OnDestroy {
                 items: [
                     {
                         label: 'Users Policy Report',
+                        routerLink: '/user-managment/users-reports',
                         // icon: 'pi pi-fw pi-compass',
 
                     },
                     {
                         label: 'Log Report',
+                        routerLink: '/user-managment/users-log-report',
                         // icon: 'pi pi-fw pi-map-marker',
 
                     },

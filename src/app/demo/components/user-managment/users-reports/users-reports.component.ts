@@ -4,9 +4,9 @@ import { Subscription } from 'rxjs';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
 
 @Component({
-    templateUrl: './dashboard.component.html',
+    templateUrl: './users-reports.component.html',
 })
-export class DashboardComponent implements OnInit, OnDestroy {
+export class UsersReportsComponent implements OnInit, OnDestroy {
 
     items!: MenuItem[];
 

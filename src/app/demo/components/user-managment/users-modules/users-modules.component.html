@@ -1,0 +1,87 @@
+<div class="grid p-fluid">
+    <div class="col-12">
+        <div class="card card-w-title">
+            <h5>User Managment</h5>
+            <p-menubar [model]="tieredItems">
+                <!-- <ng-template pTemplate="end">
+                    <span class="p-input-icon-right">
+                        <input type="text" pInputText placeholder="Search">
+                        <i class="pi pi-search"></i>
+                    </span>
+                </ng-template> -->
+            </p-menubar>
+        </div>
+    </div>
+</div>
+
+<div class="mt-2 grid p-fluid">
+    <h2>Users Modules</h2>
+</div>
+
+<div class="card">
+    <h5>User</h5>
+    <div class="field">
+        <label htmlFor="user" class="col-12 mb-2 md:col-2 md:mb-0">User</label>
+        <input pInputText id="user" type="text" class="col-12 md:col-10"/>
+    </div>
+    <button pButton label="Get User Modules" class="p-button-success"></button>
+</div>
+
+<div class="grid">
+
+    <div class="col-12 md:col-6">
+        <div class="card p-fluid">
+            <h5>User Modules</h5>
+            <div class="col-12 md:col-12">
+                <div class="field-checkbox">
+                    <p-checkbox name="group1" value="New York" id="ny"></p-checkbox>
+                    <label for="ny">Admission</label>
+                </div>
+            </div>
+            <div class="col-12 md:col-12">
+                <div class="field-checkbox">
+                    <p-checkbox name="group1" value="New York" id="ny"></p-checkbox>
+                    <label for="ny">Registration</label>
+                </div>
+            </div>
+            <div class="col-12 md:col-12">
+                <div class="field-checkbox">
+                    <p-checkbox name="group1" value="New York" id="ny"></p-checkbox>
+                    <label for="ny">Students Cards</label>
+                </div>
+            </div>
+            <div class="col-12 md:col-12">
+                <div class="field-checkbox">
+                    <p-checkbox name="group1" value="New York" id="ny"></p-checkbox>
+                    <label for="ny">Students Payments</label>
+                </div>
+            </div>
+            <div class="col-12 md:col-12">
+                <div class="field-checkbox">
+                    <p-checkbox name="group1" value="New York" id="ny"></p-checkbox>
+                    <label for="ny">Restrictions</label>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-12 md:col-6">
+        <div class="card p-fluid">
+            <h5>User Faculties</h5>
+			<p-tree [value]="files1" selectionMode="checkbox" [(selection)]="selectedFiles1"></p-tree>
+
+        </div>
+
+    </div>
+
+    <div class="col-12 md:col-12">
+        <div class="card">
+            <button pButton label="Update" class="p-button-success"></button>
+            <button pButton label="Clear" class="ml-3 p-button-danger"></button>
+        </div>
+    </div>
+
+</div>
+

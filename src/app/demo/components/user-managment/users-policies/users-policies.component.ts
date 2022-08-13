@@ -1,12 +1,16 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { MenuItem, SelectItem } from 'primeng/api';
 import { Subscription } from 'rxjs';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
 
 @Component({
-    templateUrl: './dashboard.component.html',
+    templateUrl: './users-policies.component.html',
 })
-export class DashboardComponent implements OnInit, OnDestroy {
+export class UsersPoliciesComponent implements OnInit, OnDestroy {
+
+    cities: SelectItem[] = [];
+
+    selectedDrop: SelectItem = { value: '' };
 
     items!: MenuItem[];
 
@@ -22,6 +26,14 @@ export class DashboardComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
+        this.cities = [
+            { label: 'New York', value: { id: 1, name: 'New York', code: 'NY' } },
+            { label: 'Rome', value: { id: 2, name: 'Rome', code: 'RM' } },
+            { label: 'London', value: { id: 3, name: 'London', code: 'LDN' } },
+            { label: 'Istanbul', value: { id: 4, name: 'Istanbul', code: 'IST' } },
+            { label: 'Paris', value: { id: 5, name: 'Paris', code: 'PRS' } }
+        ];
+
         this.tieredItems = [
             {
                 label: 'Home',

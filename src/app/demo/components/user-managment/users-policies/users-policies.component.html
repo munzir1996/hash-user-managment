@@ -1,0 +1,62 @@
+<div class="grid p-fluid">
+    <div class="col-12">
+        <div class="card card-w-title">
+            <h5>User Managment</h5>
+            <p-menubar [model]="tieredItems">
+                <!-- <ng-template pTemplate="end">
+                    <span class="p-input-icon-right">
+                        <input type="text" pInputText placeholder="Search">
+                        <i class="pi pi-search"></i>
+                    </span>
+                </ng-template> -->
+            </p-menubar>
+        </div>
+    </div>
+</div>
+
+<div class="mt-2 grid p-fluid">
+    <h2>Users Policies</h2>
+</div>
+
+<div class="card">
+    <h5>Manage Modules and Policies</h5>
+    <div class="field">
+        <label class="col-12 md:col-2" for="state">State</label>
+        <select id="state" class="col-12 md:col-10 text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
+            <option>Arizona</option>
+            <option>California</option>
+            <option>Florida</option>
+            <option>Ohio</option>
+            <option>Washington</option>
+        </select>
+    </div>
+
+    <button pButton label="Get User Policies" class="p-button-success"></button>
+
+    <div class="grid mt-5">
+        <div class="col-4 flex align-content-center flex-wrap">
+            <label for="policies">Policies</label>
+        </div>
+        <div class="col-8">
+            <div class="grid">
+                <div class="col-12 field-checkbox">
+                    <p-checkbox name="group1" value="New York" id="ny"></p-checkbox>
+                    <label for="ny">Manage Applicant Requests</label>
+                </div>
+                <div class="col-12 field-checkbox">
+                    <p-checkbox name="group1" value="New York" id="ny"></p-checkbox>
+                    <label for="ny">Admission Reports</label>
+                </div>
+                <div class="col-12 field-checkbox">
+                    <p-checkbox name="group1" value="New York" id="ny"></p-checkbox>
+                    <label for="ny">Admission Settings</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button pButton label="Update" class="p-button-success"></button>
+    <button pButton label="Clear" class="ml-3 p-button-danger"></button>
+</div>
+
+
